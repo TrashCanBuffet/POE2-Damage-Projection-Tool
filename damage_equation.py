@@ -462,8 +462,9 @@ def all_dmg():
         orderTable[v]=sum(valDmg)
     orderTable= sort_table(orderTable)
     for key in list(orderTable):
-        print(f"p_deriv({key}):")
-        print_vect(derivTable[key])
+        if orderTable[key] != 0:
+            print(f"p_deriv({key}):")
+            print_vect(derivTable[key])
 
 #   Sorts the dictionary of variables based on the sum of the vector elements.
 #This is so the most relevent data to the user is at the top of the print. 
